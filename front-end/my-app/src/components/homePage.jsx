@@ -7,8 +7,8 @@ import styled from 'styled-components';
 function HomePage() {
   return (
     <>
-      <Navbar bg="secondary" variant="dark">
         <Container>
+        <Navbar bg="secondary" variant="light">
             <ImageDiv>
             <img src={logo} width="60px" height="60px" alt='Shipway Logo'/>
             </ImageDiv>
@@ -17,9 +17,10 @@ function HomePage() {
             <Nav.Link  href="#Track">Track Your package</Nav.Link>
             <Nav.Link href="#features">Hub Near You</Nav.Link>
             <Nav.Link href="#pricing">Delivery Partners</Nav.Link>
+            <Nav.Link href="signIn">SignIn</Nav.Link>
           </Nav>
+          </Navbar>
         </Container>
-      </Navbar>
     </>
   );
 }
