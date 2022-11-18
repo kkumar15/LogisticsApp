@@ -9439,7 +9439,9 @@ __metadata:
     react: ^18.2.0
     react-bootstrap: ^2.5.0
     react-dom: ^18.2.0
+    react-google-autocomplete: ^2.7.0
     react-is: ^18.2.0
+    react-places-autocomplete: ^7.3.0
     react-router-dom: ^6.4.2
     react-scripts: 5.0.1
     styled-components: ^5.3.6
@@ -10991,7 +10993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.8, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.0, prop-types@npm:^15.5.8, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -11192,6 +11194,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-google-autocomplete@npm:^2.7.0":
+  version: 2.7.0
+  resolution: "react-google-autocomplete@npm:2.7.0"
+  dependencies:
+    lodash.debounce: ^4.0.8
+    prop-types: ^15.5.0
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 6dcdb87c80b0a81fa48c81a5e39cd5442a0bace388dfabf29d80bf0c172091f91aaa9cfd655b4336c4133ba54a0b35e22bc8f726db6b9442865e984ef806c35c
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1, react-is@npm:^16.3.2, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -11217,6 +11231,18 @@ __metadata:
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
   checksum: a904b0fc0a8eeb15a148c9feb7bc17cec7ef96e71188280061fc340043fd6d8ee3ff233381f0e8f95c1cf926210b2c4a31f38182c8f35ac55057e453d6df204f
+  languageName: node
+  linkType: hard
+
+"react-places-autocomplete@npm:^7.3.0":
+  version: 7.3.0
+  resolution: "react-places-autocomplete@npm:7.3.0"
+  dependencies:
+    lodash.debounce: ^4.0.8
+    prop-types: ^15.5.8
+  peerDependencies:
+    react: ">=0.14.7"
+  checksum: b507fedc60129a7def162c0a82ef1eb17f856dc63e4547edc5123f41b32f0e47542682d4e2a86a3c63eba8ba91c68d3a00d71ded02363f1ded194dd78f04d29f
   languageName: node
   linkType: hard
 

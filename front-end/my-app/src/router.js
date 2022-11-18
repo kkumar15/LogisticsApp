@@ -4,6 +4,7 @@ import SignUp from "./components/singUp";
 import CustomerView from "./components/customerViews/customerView"
 import CustomerOrderForm from "./components/customerViews/customerOrderForm"
 import CustomerViewOrder from "./components/customerViews/customerViewOrders"
+import CustomerPastOrder from "./components/customerViews/customerPastOrders"
 const routesArray = [
   {
     path: "/",
@@ -29,6 +30,10 @@ const routesArray = [
   {
     path: "/customerView/viewOrderForm",
     element: <CustomerViewOrder />
+  },
+  {
+    path: "/customerView/pastOrder",
+    element: <CustomerPastOrder />
   }
 ];
 

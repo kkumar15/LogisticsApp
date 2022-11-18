@@ -1,5 +1,6 @@
+import AutoAddressBar from "../general/autoAddressbar";
 const someThing = () => {
-    return <h1> hello </h1>
+    return <AutoAddressBar></AutoAddressBar>
 }
 
 export default someThing;

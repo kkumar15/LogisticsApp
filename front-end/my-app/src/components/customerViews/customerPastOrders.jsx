@@ -34,6 +34,8 @@ export default function BasicTable() {
   const [rows, setRows] = useState(originalRows);
   const [searched, setSearched] = useState("");
   const classes = useStyles();
+  const [cancel , setCancel] = useState(false);
+  const [deletedName , setDeleteName] = useState("")
   const requestSearch = (searchedVal) => {
     const filteredRows = originalRows.filter((row) => {
       return row.name.toLowerCase().includes(searchedVal.toLowerCase());
@@ -46,12 +48,18 @@ export default function BasicTable() {
     requestSearch(searched);
   };
   const handleRemoval = (name) => {
+    const filteredRows = rows.filter((row) => {
+      return row.name != name;
+    })
+    setRows(filteredRows);
+    setCancel(true);
+    setDeleteName(name);
   }
 
   return (
     <>
     <NavBar></NavBar>
-    <h1>Orders in Progress</h1>
+    <h1>Past Orders</h1>
       <Paper>
         <SearchBar
           value={searched}
@@ -86,7 +94,7 @@ export default function BasicTable() {
                   <TableCell align="right">{row.protein}</TableCell>
                   <TableCell align="right">{row.protein}</TableCell>
                   <TableCell align="right">{row.protein}</TableCell>
-                  <TableCell align="right"><Button variant="contained" onClick = {handleRemoval(row.name)} >Remove</Button></TableCell>
+                  <TableCell align="right"><Button variant="contained" onClick = {() => handleRemoval(row.name)} >Post Review</Button></TableCell>
                   
                 </TableRow>
               ))}
@@ -94,6 +102,9 @@ export default function BasicTable() {
           </Table>
         </TableContainer>
       </Paper>
+      {cancel && 
+        <h1>{deletedName} is Cancelled</h1>
+        }
       <br />
     </>
   );
